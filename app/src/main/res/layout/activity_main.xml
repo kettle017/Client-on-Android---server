@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_main_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewHttp_Https"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
+            android:layout_marginStart="150sp"
+            android:text="@string/http_https"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchHttp"
+            android:layout_below="@id/textViewHttp_Https"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginHorizontal="170sp"
+            tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+        <ImageView
+            android:id="@+id/img_main"
+            android:layout_marginHorizontal="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="221dp"
+            android:layout_marginTop="100sp"
+            app:srcCompat="@drawable/image_white"
+            android:contentDescription="@string/todo" />
+
+
+        <TextView
+            android:id="@+id/textView_authorization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_main"
+            android:fontFamily="monospace"
+            android:text="@string/authorization"
+            android:textAlignment="center"
+            android:textColor="#DCCECE"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/editText_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_authorization"
+            android:layout_marginHorizontal="40sp"
+            android:layout_marginTop="20sp"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="@string/login"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_login"
+            android:layout_marginHorizontal="40sp"
+            android:layout_marginTop="15sp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#cccccc"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/textView_itog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_password"
+            android:layout_marginTop="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="100sp"
+            android:layout_marginStart="100sp"
+            android:layout_marginHorizontal="65sp"/>
+
+        <Button
+            android:id="@+id/button_log_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:backgroundTint="#353353"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="90sp"
+            android:layout_below="@id/textView_itog"
+            android:text="@string/log_in" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
